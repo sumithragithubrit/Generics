@@ -2,23 +2,32 @@ package com.genericsproblem;
 
 public class  Generics {
 	
-	static void max_variables(Integer num1, Integer num2, Integer num3){
-        if(num1.compareTo(num2) > 0){
-            if(num1.compareTo(num3) > 0){
-                System.out.println( num1 + " is Maximum of three numbers ");
-            }else {
-                System.out.println( num3 + " is Maximum of three numbers ");
-            }
-        }else{
-            if(num2.compareTo(num3) > 0){
-                System.out.println( num2 + " is Maximum of three numbers ");
-            }else{
-                System.out.println( num3 + " is Maximum of three numbers ");
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        max_variables(345,445,1000);
-    }
+	
+	    public static void toPrintArray(Integer[] inputArray){
+	        for (int element:inputArray) {
+	            System.out.print(element+",");
+	        }
+	        System.out.println();
+	    }
+	    public static void toPrintArray(Double[] inputArray){
+	        for (double element:inputArray) {
+	            System.out.print(element+",");
+	        }
+	        System.out.println();
+	    }
+	    public static void toPrintArray(Character[] inputArray) {
+	        for (char element : inputArray) {
+	            System.out.print(element + ",");
+	        }
+	        System.out.println();
+	    }
+	    public static void main(String[] args) {
+	        Integer[] intArray ={1,2,3,4,5,7,8,9};
+	        Double[] doubleArray ={1.2,3.2,3.4,4.5,5.2,7.8};
+	        Character[] charArray ={'A','C','D','W','Q'};
+	        toPrintArray(intArray);
+	        toPrintArray(doubleArray);
+	        toPrintArray(charArray);
+	    }
+	
 }
